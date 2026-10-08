@@ -1,0 +1,1299 @@
+.brand-page {
+  overflow: hidden;
+}
+
+.brand-page .about-editorial-hero,
+.brand-page .v60-hero,
+.brand-page .visit-welcome {
+  isolation: isolate;
+}
+
+.about-editorial-hero {
+  background: #17110d;
+}
+
+.about-editorial-hero-image,
+.v60-hero-image,
+.visit-welcome-image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-editorial-hero-image {
+  object-position: center 54%;
+  filter: saturate(0.72);
+  animation: page-image-arrive 1.3s ease-out both;
+}
+
+.about-editorial-hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(0deg, rgba(10, 7, 5, 0.96), rgba(10, 7, 5, 0.5) 44%, rgba(10, 7, 5, 0.08) 100%),
+    linear-gradient(90deg, rgba(10, 7, 5, 0.36), transparent 80%);
+}
+
+.about-editorial-hero .about-kicker,
+.about-kicker {
+  color: #e3c994;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.about-hero-link,
+.visit-down-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(227, 201, 148, 0.65);
+  padding-bottom: 10px;
+  color: #f2e7d5;
+  font-size: 13px;
+  transition: gap 250ms ease, color 250ms ease;
+}
+
+.about-hero-link:hover,
+.visit-down-link:hover {
+  gap: 18px;
+  color: #e3c994;
+}
+
+.about-editorial-stamp {
+  position: absolute;
+  top: 36%;
+  left: 9%;
+  display: flex;
+  width: 118px;
+  height: 118px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid rgba(227, 201, 148, 0.68);
+  border-radius: 50%;
+  color: #f1e4cf;
+  font-size: 11px;
+  backdrop-filter: blur(5px);
+  animation: stamp-enter 800ms 500ms both;
+}
+
+.about-editorial-stamp-line {
+  width: 24px;
+  height: 1px;
+  background: #e3c994;
+}
+
+.about-editorial-index {
+  position: absolute;
+  right: 32px;
+  bottom: 42px;
+  color: rgba(227, 201, 148, 0.8);
+  font-family: Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+.about-story-layout {
+  background: #eee6d9;
+  color: #241b14;
+}
+
+.about-story-photo {
+  position: relative;
+  min-height: 460px;
+  overflow: hidden;
+  background: #d6c7ad;
+}
+
+.about-story-photo::before {
+  position: absolute;
+  z-index: 1;
+  inset: 14px;
+  border: 1px solid rgba(245, 234, 211, 0.6);
+  content: "";
+  pointer-events: none;
+}
+
+.about-story-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 800ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.about-story-photo:hover img {
+  transform: scale(1.04);
+}
+
+.about-story-photo > span {
+  position: absolute;
+  z-index: 2;
+  right: 30px;
+  bottom: 30px;
+  color: #fff8ed;
+  font-size: 12px;
+}
+
+.about-story-copy .about-kicker {
+  color: #97784c;
+}
+
+.about-story-copy > p:not(.about-kicker) {
+  color: #665a4e;
+}
+
+.about-timeline {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(124, 97, 62, 0.28);
+}
+
+.about-timeline-point {
+  position: relative;
+  padding: 17px 28px 17px 0;
+  border-bottom: 1px solid rgba(124, 97, 62, 0.22);
+}
+
+.about-timeline-point::before {
+  position: absolute;
+  top: 25px;
+  right: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ab8958;
+  box-shadow: 0 0 0 4px rgba(171, 137, 88, 0.14);
+  content: "";
+}
+
+.about-timeline-point > span {
+  color: #957346;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.about-timeline-point > p {
+  margin-top: 6px;
+  color: #51463b;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.about-manifesto {
+  background:
+    radial-gradient(ellipse at 50% 120%, rgba(139, 98, 53, 0.24), transparent 55%),
+    #17110d;
+}
+
+.about-manifesto .about-kicker {
+  position: relative;
+  z-index: 1;
+}
+
+.about-manifesto-mark {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  color: rgba(200, 164, 106, 0.12);
+  font-family: Georgia, serif;
+  font-size: 300px;
+  line-height: 1;
+  transform: translateX(-50%);
+}
+
+.philosophy-hero {
+  min-height: 600px;
+  background:
+    linear-gradient(115deg, rgba(247, 239, 224, 0.93), rgba(229, 211, 183, 0.9)),
+    url("/images/coffee-parallax.png") center / cover;
+  color: #241a12;
+  isolation: isolate;
+}
+
+.philosophy-hero-sun {
+  position: absolute;
+  top: -310px;
+  left: -150px;
+  z-index: -1;
+  width: 690px;
+  height: 690px;
+  border: 1px solid rgba(133, 101, 61, 0.23);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 36px rgba(133, 101, 61, 0.035),
+    0 0 0 88px rgba(133, 101, 61, 0.025);
+}
+
+.philosophy-kicker,
+.philosophy-board-heading > span {
+  color: #81653f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.philosophy-hero-aside {
+  max-width: 340px;
+  border-right: 1px solid rgba(129, 101, 63, 0.38);
+  padding: 8px 24px 8px 0;
+}
+
+.philosophy-orbit {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(129, 101, 63, 0.23);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.philosophy-orbit-one {
+  right: -130px;
+  bottom: -210px;
+  width: 470px;
+  height: 470px;
+}
+
+.philosophy-orbit-two {
+  right: -80px;
+  bottom: -160px;
+  width: 370px;
+  height: 370px;
+}
+
+.philosophy-board {
+  background: #eae0d0;
+  color: #241a12;
+}
+
+.philosophy-board-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid rgba(86, 66, 43, 0.2);
+  padding-bottom: 22px;
+}
+
+.philosophy-bento {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  grid-template-rows: minmax(310px, auto) minmax(200px, auto);
+  gap: 16px;
+}
+
+.philosophy-bento-origin,
+.philosophy-bento-craft,
+.philosophy-bento-hospitality,
+.philosophy-bento-note {
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy-bento-origin {
+  display: flex;
+  align-items: end;
+  min-height: 350px;
+  padding: 32px;
+  color: #f8f1e6;
+  isolation: isolate;
+}
+
+.philosophy-bento-origin > img,
+.philosophy-bento-origin-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.philosophy-bento-origin > img {
+  object-fit: cover;
+  transition: transform 850ms ease;
+}
+
+.philosophy-bento-origin:hover > img {
+  transform: scale(1.045);
+}
+
+.philosophy-bento-origin-shade {
+  background: linear-gradient(0deg, rgba(18, 12, 8, 0.95), rgba(18, 12, 8, 0.08) 95%);
+}
+
+.philosophy-bento-origin h3,
+.philosophy-bento-craft h3,
+.philosophy-bento-hospitality h3 {
+  margin-top: 18px;
+  font-family: 'Almarai', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.philosophy-bento-origin p,
+.philosophy-bento-craft p,
+.philosophy-bento-hospitality p {
+  max-width: 490px;
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.philosophy-bento-craft {
+  display: flex;
+  min-height: 350px;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+  background: #c8a46a;
+  color: #251a10;
+}
+
+.philosophy-bento-craft .philosophy-number,
+.philosophy-bento-hospitality .philosophy-number {
+  color: #624a2d;
+}
+
+.philosophy-craft-symbol {
+  position: absolute;
+  top: 29px;
+  left: 30px;
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid rgba(37, 26, 16, 0.32);
+  border-radius: 50%;
+}
+
+.philosophy-craft-caption {
+  margin-top: 25px;
+  color: rgba(37, 26, 16, 0.65);
+  font-family: Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 0.24em;
+}
+
+.philosophy-number {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.philosophy-bento-hospitality {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 28px 34px;
+  background: #f4eee4;
+  color: #2d2117;
+}
+
+.philosophy-hospitality-mark {
+  display: grid;
+  width: 100px;
+  height: 100px;
+  flex: 0 0 100px;
+  place-items: center;
+  border: 1px solid rgba(126, 94, 53, 0.34);
+  border-radius: 50%;
+  color: #977749;
+  font-family: 'Almarai', sans-serif;
+  font-size: 42px;
+}
+
+.philosophy-bento-hospitality h3 {
+  margin-top: 9px;
+  font-size: 18px;
+}
+
+.philosophy-bento-hospitality p {
+  margin-top: 5px;
+  color: #645545;
+  font-size: 12px;
+}
+
+.philosophy-bento-note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 28px 34px;
+  background: #34251b;
+  color: #efe4d2;
+}
+
+.philosophy-bento-note > p {
+  margin-top: 15px;
+  font-family: 'Almarai', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.9;
+}
+
+.philosophy-bento-note > span:first-child {
+  color: #d6b77e;
+}
+
+.philosophy-note-rule {
+  width: 48px;
+  height: 1px;
+  margin-top: 16px;
+  background: #c8a46a;
+}
+
+.philosophy-last-word {
+  background: #1b130e;
+}
+
+.philosophy-sensory {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 25% 55%, rgba(200, 164, 106, 0.08), transparent 38%),
+    #19120d;
+}
+
+.philosophy-sensory-photo {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  background: #291d14;
+}
+
+.philosophy-sensory-photo::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(227, 201, 148, 0.35);
+  content: "";
+  margin: 14px;
+  pointer-events: none;
+}
+
+.philosophy-sensory-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.72);
+  transition: transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 700ms ease;
+}
+
+.philosophy-sensory-photo:hover img {
+  transform: scale(1.045);
+  filter: saturate(0.96);
+}
+
+.philosophy-sensory-photo-label {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  z-index: 1;
+  display: flex;
+  min-width: 152px;
+  flex-direction: column;
+  gap: 8px;
+  border-right: 1px solid #d9bb80;
+  background: rgba(20, 14, 9, 0.77);
+  padding: 13px 16px;
+  color: #f5ead8;
+  backdrop-filter: blur(10px);
+}
+
+.philosophy-sensory-photo-label span:first-child {
+  color: #d9bb80;
+  font-family: Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 0.24em;
+}
+
+.philosophy-sensory-photo-label span:last-child {
+  font-size: 12px;
+}
+
+.philosophy-sensory-kicker {
+  color: #d4b77d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.philosophy-sensory-copy > p {
+  color: #c2b6a5;
+}
+
+.philosophy-tasting-list {
+  border-top: 1px solid rgba(200, 164, 106, 0.34);
+}
+
+.philosophy-tasting-row {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) 22px;
+  align-items: center;
+  gap: 17px;
+  min-height: 94px;
+  border-bottom: 1px solid rgba(200, 164, 106, 0.2);
+  transition: padding 300ms ease, background-color 300ms ease;
+}
+
+.philosophy-tasting-row:hover {
+  padding-right: 12px;
+  background: linear-gradient(270deg, rgba(200, 164, 106, 0.07), transparent 70%);
+}
+
+.philosophy-tasting-row > span {
+  color: #c8a46a;
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.philosophy-tasting-row h3 {
+  color: #f0e7d9;
+  font-family: 'Almarai', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.philosophy-tasting-row p {
+  margin-top: 6px;
+  color: #a99b88;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.philosophy-tasting-row > svg {
+  color: #c8a46a;
+}
+
+.philosophy-hospitality-story {
+  display: grid;
+  min-height: 510px;
+  grid-template-columns: 1.05fr 0.95fr;
+  background: #33261b;
+}
+
+.philosophy-hospitality-image {
+  position: relative;
+  min-height: 450px;
+  overflow: hidden;
+}
+
+.philosophy-hospitality-image::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, rgba(31, 22, 15, 0.45), transparent 65%);
+  content: "";
+}
+
+.philosophy-hospitality-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  object-fit: cover;
+  filter: saturate(0.7);
+  transition: transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.philosophy-hospitality-image:hover img {
+  transform: scale(1.035);
+}
+
+.philosophy-hospitality-copy {
+  align-self: center;
+  max-width: 620px;
+  padding: 72px clamp(30px, 7vw, 94px);
+  text-align: right;
+}
+
+.philosophy-hospitality-signoff {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #d4b77d;
+}
+
+.philosophy-hospitality-signoff > span:first-child {
+  font-size: 9px;
+}
+
+.philosophy-hospitality-rule {
+  width: 34px;
+  height: 1px;
+  background: rgba(212, 183, 125, 0.5);
+}
+
+.v60-hero {
+  background: #100b08;
+}
+
+.v60-hero-image {
+  object-position: center;
+  filter: saturate(0.65);
+  animation: page-image-arrive 1.2s ease-out both;
+}
+
+.v60-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(12, 8, 6, 0.2), rgba(12, 8, 6, 0.53)),
+    linear-gradient(0deg, rgba(12, 8, 6, 0.88), rgba(12, 8, 6, 0.23) 75%);
+}
+
+.v60-eyebrow,
+.v60-small-label {
+  color: #d4b77d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.v60-scroll-cue {
+  display: inline-grid;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  border: 1px solid rgba(227, 201, 148, 0.65);
+  border-radius: 50%;
+  color: #e3c994;
+  animation: cue-bob 2.3s ease-in-out infinite;
+}
+
+.v60-side-caption {
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  color: rgba(227, 201, 148, 0.8);
+  font-family: Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%);
+}
+
+.v60-ritual {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(rgba(19, 13, 9, 0.87), rgba(19, 13, 9, 0.93)),
+    url("/images/v60_hero.jpg") center 48% / cover fixed,
+    #130d09;
+}
+
+.v60-ritual::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 0, rgba(200, 164, 106, 0.14), transparent 44%),
+    linear-gradient(90deg, rgba(13, 9, 6, 0.22), transparent 50%, rgba(13, 9, 6, 0.22));
+  content: "";
+  pointer-events: none;
+}
+
+.v60-intro {
+  max-width: 650px;
+  text-align: right;
+}
+
+.v60-steps {
+  border-top: 1px solid rgba(200, 164, 106, 0.34);
+}
+
+.v60-step {
+  display: grid;
+  grid-template-columns: 70px 70px minmax(0, 1fr) 110px;
+  align-items: center;
+  gap: 20px;
+  min-height: 158px;
+  border-bottom: 1px solid rgba(200, 164, 106, 0.24);
+  transition: padding 350ms ease, background-color 350ms ease;
+}
+
+.v60-step:hover {
+  padding-right: 15px;
+  background: linear-gradient(270deg, rgba(200, 164, 106, 0.07), transparent 68%);
+}
+
+.v60-step-no {
+  color: #b08f5a;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+}
+
+.v60-step-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid rgba(200, 164, 106, 0.4);
+  border-radius: 50%;
+  color: #e3c994;
+}
+
+.v60-step h3 {
+  font-family: 'Almarai', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f0e7d9;
+}
+
+.v60-step p {
+  max-width: 560px;
+  margin-top: 9px;
+  color: #b6a895;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.v60-step-aside {
+  color: rgba(200, 164, 106, 0.6);
+  font-family: Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-align: left;
+}
+
+.v60-aftertaste {
+  display: grid;
+  min-height: 480px;
+  grid-template-columns: 1fr 1fr;
+  background: #20170f;
+}
+
+.v60-aftertaste-image {
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.v60-aftertaste-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  filter: saturate(0.76);
+  transition: transform 900ms ease;
+}
+
+.v60-aftertaste-image:hover img {
+  transform: scale(1.04);
+}
+
+.v60-aftertaste-copy {
+  display: flex;
+  max-width: 640px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 72px clamp(28px, 8vw, 110px);
+  text-align: right;
+}
+
+.v60-location-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(200, 164, 106, 0.55);
+  padding: 0 0 10px;
+  color: #e3c994;
+  font-size: 13px;
+  transition: gap 250ms ease;
+}
+
+.v60-location-link:hover {
+  gap: 18px;
+}
+
+.visit-welcome {
+  background: #120d09;
+}
+
+.visit-welcome-image {
+  object-position: center 55%;
+  filter: saturate(0.72);
+  animation: page-image-arrive 1.2s ease-out both;
+}
+
+.visit-welcome-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(11, 8, 6, 0.96), rgba(11, 8, 6, 0.28) 70%, rgba(11, 8, 6, 0.16));
+}
+
+.visit-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #e3c994;
+  font-size: 12px;
+}
+
+.visit-welcome-coordinate {
+  position: absolute;
+  top: 155px;
+  left: 38px;
+  color: rgba(243, 231, 212, 0.74);
+  font-family: Georgia, serif;
+  font-size: 10px;
+  line-height: 1.9;
+  letter-spacing: 0.12em;
+}
+
+.visit-details {
+  background: #f0e8dc;
+  color: #2a2017;
+}
+
+.visit-info-panel {
+  align-self: center;
+  padding: 15px 0;
+}
+
+.visit-overline {
+  color: #927448;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.visit-info-panel h2 {
+  color: #291f17;
+}
+
+.visit-info-panel > p {
+  color: #665a4c;
+}
+
+.visit-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  border-top: 1px solid rgba(96, 73, 46, 0.2);
+  padding-top: 22px;
+  color: #977748;
+}
+
+.visit-address > div > span {
+  color: #8c7556;
+  font-size: 11px;
+}
+
+.visit-address p {
+  margin-top: 7px;
+  color: #34291f;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.visit-directions {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(126, 94, 53, 0.4);
+  padding: 15px 17px;
+  color: #493823;
+  font-size: 12px;
+  transition: border-color 250ms ease, background 250ms ease;
+}
+
+.visit-directions:hover {
+  border-color: #8c6c3f;
+  background: rgba(200, 164, 106, 0.12);
+}
+
+.visit-hours-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #766754;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.visit-open-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: #9a875b;
+  box-shadow: 0 0 0 4px rgba(154, 135, 91, 0.12);
+}
+
+.visit-map-frame {
+  position: relative;
+  min-height: 470px;
+  overflow: hidden;
+  border: 8px solid #fbf7ef;
+  background: #d8d0c2;
+  box-shadow: 0 22px 65px rgba(57, 43, 27, 0.13);
+}
+
+.visit-map-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.35) sepia(0.13);
+}
+
+.visit-map-label {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #fbf7ef;
+  padding: 12px 15px;
+  color: #34271b;
+  font-size: 11px;
+  box-shadow: 0 8px 22px rgba(23, 16, 10, 0.15);
+}
+
+.visit-gallery-section {
+  background: #17110d;
+}
+
+.visit-gallery-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 24px;
+}
+
+.visit-gallery-heading > p {
+  color: #b9aa96;
+  font-size: 12px;
+}
+
+.visit-gallery {
+  display: grid;
+  height: 490px;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 14px;
+}
+
+.visit-gallery figure {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: #282017;
+}
+
+.visit-gallery figure::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(13, 9, 6, 0.72), transparent 40%);
+  content: "";
+}
+
+.visit-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 800ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.visit-gallery figure:hover img {
+  transform: scale(1.045);
+}
+
+.visit-gallery figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 22px;
+  bottom: 22px;
+  color: #f3e9d9;
+  font-size: 12px;
+}
+
+@keyframes page-image-arrive {
+  from {
+    transform: scale(1.04);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes stamp-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.82) rotate(-18deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(-12deg);
+  }
+}
+
+@keyframes cue-bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+@media (max-width: 900px) {
+  .philosophy-bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(310px, auto) minmax(240px, auto);
+  }
+
+  .philosophy-bento-origin {
+    grid-column: 1 / -1;
+  }
+
+  .philosophy-bento-craft,
+  .philosophy-bento-hospitality {
+    min-height: 265px;
+  }
+
+  .philosophy-sensory-photo {
+    min-height: 460px;
+  }
+
+  .philosophy-hospitality-story {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-hospitality-image,
+  .philosophy-hospitality-image img {
+    min-height: 360px;
+    max-height: 480px;
+  }
+
+  .philosophy-hospitality-copy {
+    max-width: none;
+    padding: 60px 8%;
+  }
+
+  .v60-aftertaste {
+    grid-template-columns: 1fr;
+  }
+
+  .v60-aftertaste-image,
+  .v60-aftertaste-image img {
+    min-height: 360px;
+    max-height: 480px;
+  }
+
+  .v60-aftertaste-copy {
+    max-width: none;
+    padding: 64px 9%;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-editorial-hero {
+    min-height: 720px;
+  }
+
+  .about-editorial-hero-image {
+    object-position: 56% center;
+  }
+
+  .about-editorial-stamp {
+    top: 150px;
+    left: 22px;
+    width: 90px;
+    height: 90px;
+    font-size: 9px;
+  }
+
+  .about-editorial-index {
+    right: 22px;
+    bottom: 23px;
+  }
+
+  .about-story-photo {
+    min-height: 360px;
+  }
+
+  .about-manifesto-mark {
+    top: 50px;
+    font-size: 190px;
+  }
+
+  .philosophy-hero {
+    min-height: auto;
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+
+  .philosophy-hero-aside {
+    max-width: 300px;
+  }
+
+  .philosophy-board-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .philosophy-bento {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .philosophy-bento-origin {
+    min-height: 310px;
+    grid-column: auto;
+    padding: 24px;
+  }
+
+  .philosophy-bento-craft {
+    min-height: 280px;
+    padding: 25px;
+  }
+
+  .philosophy-bento-hospitality {
+    min-height: 220px;
+    gap: 17px;
+    padding: 23px;
+  }
+
+  .philosophy-hospitality-mark {
+    width: 70px;
+    height: 70px;
+    flex-basis: 70px;
+    font-size: 30px;
+  }
+
+  .philosophy-bento-note {
+    min-height: 180px;
+  }
+
+  .philosophy-sensory-photo {
+    min-height: 370px;
+  }
+
+  .philosophy-tasting-row {
+    grid-template-columns: 30px minmax(0, 1fr) 18px;
+    gap: 12px;
+    min-height: 104px;
+  }
+
+  .philosophy-tasting-row p {
+    font-size: 10px;
+  }
+
+  .philosophy-hospitality-image,
+  .philosophy-hospitality-image img {
+    min-height: 280px;
+    max-height: 340px;
+  }
+
+  .v60-hero {
+    min-height: 700px;
+  }
+
+  .v60-ritual {
+    background-attachment: scroll;
+  }
+
+  .v60-side-caption {
+    display: none;
+  }
+
+  .v60-step {
+    grid-template-columns: 35px 46px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 150px;
+  }
+
+  .v60-step-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .v60-step h3 {
+    font-size: 16px;
+  }
+
+  .v60-step p {
+    font-size: 12px;
+  }
+
+  .v60-step-aside {
+    display: none;
+  }
+
+  .v60-aftertaste-image,
+  .v60-aftertaste-image img {
+    min-height: 290px;
+    max-height: 360px;
+  }
+
+  .visit-welcome {
+    min-height: 660px;
+  }
+
+  .visit-welcome-coordinate {
+    top: 120px;
+    left: 20px;
+    font-size: 8px;
+  }
+
+  .visit-map-frame {
+    min-height: 340px;
+    border-width: 5px;
+  }
+
+  .visit-gallery-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .visit-gallery {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .visit-gallery-large {
+    height: 310px;
+  }
+
+  .visit-gallery-small {
+    height: 230px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-editorial-hero-image,
+  .about-editorial-stamp,
+  .v60-hero-image,
+  .visit-welcome-image,
+  .v60-scroll-cue {
+    animation: none;
+  }
+
+  .about-story-photo img,
+  .philosophy-bento-origin > img,
+  .philosophy-sensory-photo img,
+  .philosophy-hospitality-image img,
+  .v60-aftertaste-image img,
+  .visit-gallery img {
+    transition: none;
+  }
+}

@@ -1,0 +1,411 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/almarai/almarai-arabic-300-normal.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+1EE00-1EEFF;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/almarai/almarai-latin-300-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/almarai/almarai-arabic-400-normal.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+1EE00-1EEFF;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/almarai/almarai-latin-400-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/almarai/almarai-arabic-700-normal.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+1EE00-1EEFF;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/almarai/almarai-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/almarai/almarai-arabic-800-normal.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+1EE00-1EEFF;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/almarai/almarai-latin-800-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@layer base {
+  :root {
+    --color-espresso: #160D08;
+    --color-espresso-dark: #090604;
+    --color-espresso-deep: #24150E;
+    --color-cream: #F3EBDD;
+    --color-cream-light: #F8F4EC;
+    --color-gold: #C8A46A;
+    --color-gold-light: #E3C994;
+    --color-coffee-brown: #4A2B1C;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #090604;
+    color: #F8F4EC;
+    font-family: 'Almarai', sans-serif;
+    direction: rtl;
+  }
+
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: start;
+    background-color: #090604;
+    color: #F8F4EC;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Almarai', sans-serif;
+  }
+
+  #root {
+    direction: rtl;
+    text-align: start;
+  }
+
+  button {
+    font-weight: 500;
+  }
+
+  ::selection {
+    background-color: #C8A46A;
+    color: #090604;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090604;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3D281C;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C8A46A;
+}
+
+/* Grain Noise Overlay */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+.header-primary-mix {
+  background: #967C6D !important;
+}
+
+.parallax-background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-background {
+    background-attachment: scroll;
+  }
+}
+
+.scroll-reveal-from-right {
+  opacity: 0;
+  transform: translateX(56px);
+}
+
+.scroll-reveal-from-right.is-visible {
+  animation: reveal-from-right 750ms ease-out both;
+}
+
+@keyframes reveal-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(56px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal-from-right {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+.scroll-reveal-from-right .story-copy-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.scroll-reveal-from-right.is-visible .story-copy-reveal {
+  animation: story-copy-enter 650ms ease-out both;
+}
+
+.scroll-reveal-from-right.is-visible .story-reveal-delay-2 {
+  animation-delay: 90ms;
+}
+
+.scroll-reveal-from-right.is-visible .story-reveal-delay-3 {
+  animation-delay: 160ms;
+}
+
+.scroll-reveal-from-right.is-visible .story-reveal-delay-4 {
+  animation-delay: 230ms;
+}
+
+.scroll-reveal-from-right.is-visible .story-reveal-delay-5 {
+  animation-delay: 300ms;
+}
+
+.scroll-reveal-from-right.is-visible .story-reveal-delay-6 {
+  animation-delay: 370ms;
+}
+
+.scroll-reveal-from-right.is-visible .story-reveal-delay-7 {
+  animation-delay: 440ms;
+}
+
+.story-image-reveal {
+  transform: scale(1.12);
+  opacity: 0.75;
+}
+
+.scroll-reveal-from-right.is-visible .story-image-reveal {
+  animation: story-image-enter 1400ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes story-copy-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes story-image-enter {
+  from {
+    opacity: 0.75;
+    transform: scale(1.12);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal-from-right .story-copy-reveal,
+  .story-image-reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* Luxury Glassmorphism */
+.glass-espresso {
+  background: rgba(36, 21, 14, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(200, 164, 106, 0.2);
+}
+
+.glass-espresso-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-espresso-hover:hover {
+  background: rgba(36, 21, 14, 0.85);
+  border-color: rgba(200, 164, 106, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(200, 164, 106, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Gold Gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F8F4EC 0%, #E3C994 40%, #C8A46A 75%, #A68249 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coffee-card {
+  perspective: 1400px;
+  cursor: pointer;
+  min-height: 320px;
+}
+
+.coffee-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-style: preserve-3d;
+}
+
+.coffee-card:hover .coffee-card-inner,
+.coffee-card:focus-within .coffee-card-inner {
+  transform: rotateY(180deg);
+}
+
+.coffee-card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.coffee-card-front {
+  background: linear-gradient(180deg, rgba(168, 143, 129, 0.96) 0%, rgba(141, 117, 101, 0.96) 100%);
+  border: 1px solid rgba(61, 40, 28, 0.45);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12);
+}
+
+.coffee-card-front-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.8rem;
+}
+
+.coffee-card-number {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: rgba(61, 40, 28, 0.8);
+}
+
+.coffee-card-title {
+  text-align: center;
+  font-size: clamp(1.55rem, 2vw, 2.2rem);
+  line-height: 1.8;
+  color: #20140F;
+  font-weight: 700;
+}
+
+.coffee-card-subtitle {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #3D281C;
+}
+
+.coffee-card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(180deg, rgba(233, 217, 201, 0.96) 0%, rgba(214, 190, 170, 0.96) 100%);
+  border: 1px solid rgba(61, 40, 28, 0.7);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+  color: #20140F;
+}
+
+.coffee-card-back-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+  padding: 1.25rem;
+}
+
+.coffee-card-back p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.9;
+  color: #302019;
+  text-align: center;
+}
+
+/* Torn / Brush edge mask for Saudi heritage section */
+.brush-mask {
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 60%, transparent 100%);
+}
+
+/* Animated gold border pulse */
+@keyframes goldBorderGlow {
+
+  0%,
+  100% {
+    border-color: rgba(200, 164, 106, 0.3);
+  }
+
+  50% {
+    border-color: rgba(227, 201, 148, 0.7);
+  }
+}
+
+.gold-glow-animated {
+  animation: goldBorderGlow 3s ease-in-out infinite;
+}
